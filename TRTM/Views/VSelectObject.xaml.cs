@@ -27,6 +27,11 @@ namespace TRTM.Views
             InitializeComponent();
             this.DataContext = vmSelectObject;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

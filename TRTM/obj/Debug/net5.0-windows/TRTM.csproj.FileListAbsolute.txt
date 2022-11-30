@@ -6,10 +6,18 @@ D:\BOULOT\Projets persos\TRTM\TRTM\bin\Debug\net5.0-windows\TRTM.dll
 D:\BOULOT\Projets persos\TRTM\TRTM\bin\Debug\net5.0-windows\ref\TRTM.dll
 D:\BOULOT\Projets persos\TRTM\TRTM\bin\Debug\net5.0-windows\TRTM.pdb
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\MainWindow.g.cs
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\Menu.g.cs
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VInventory.g.cs
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VSearch.g.cs
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VSelectObject.g.cs
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\App.g.cs
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM_MarkupCompile.cache
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM_MarkupCompile.lref
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\MainWindow.baml
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\Menu.baml
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VInventory.baml
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VSearch.baml
+D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\Views\VSelectObject.baml
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.g.resources
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.GeneratedMSBuildEditorConfig.editorconfig
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.AssemblyInfoInputs.cache
@@ -19,4 +27,3 @@ D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.dll
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\ref\TRTM.dll
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.pdb
 D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.genruntimeconfig.cache
-D:\BOULOT\Projets persos\TRTM\TRTM\obj\Debug\net5.0-windows\TRTM.csproj.AssemblyReference.cache

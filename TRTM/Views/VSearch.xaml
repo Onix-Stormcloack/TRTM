@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRTM.ViewModels"
         mc:Ignorable="d"
-        d:DataContext= " {d:DesignInstance local:VMSearch}"
+        d:DataContext= "{d:DesignInstance local:VMSearch}"
 		Title="TRTM"
 		Icon="/src/images/Icon.jpg"
 		Background="LightSteelBlue" Height="450" Width="800" 
@@ -21,8 +21,12 @@
 						</Border>
 						<ControlTemplate.Triggers>
 							<Trigger Property="IsMouseOver" Value="True">
-								<Setter Property="Background" Value="LightGreen" TargetName="Border" />
-							</Trigger>
+                                <Setter Property="Background" TargetName="Border" >
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked2.png"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
 						</ControlTemplate.Triggers>
 					</ControlTemplate>
 				</Setter.Value>
@@ -35,22 +39,22 @@
 		</Grid.Background>
 		<Image x:Name="WoodenSign" Margin="120,0,120,233" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png"/>
 		<Label Content="Traveller's Rest Tavern Management" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0" FontFamily="Script MT Bold" FontSize="30"/>
-		<Button Content=" Agriculture " HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Bauhaus 93" FontSize="24">
+		<Button Content=" Agriculture " HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
 			<Button.Background>
 				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content=" Boissons " HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Bauhaus 93" FontSize="24">
+		<Button Content=" Boissons " HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
 			<Button.Background>
 				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content=" Cuisine " HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Bauhaus 93" FontSize="24">
+		<Button Content=" Cuisine " HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
 			<Button.Background>
 				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
 			</Button.Background>
 		</Button>
-		<Button Content="  ?" HorizontalAlignment="Left" Margin="739,340,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Bauhaus 93" Height="36" Width="36" FontSize="24">
+		<Button Content="  ?" HorizontalAlignment="Left" Margin="739,340,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" Height="36" Width="36" FontSize="24">
 			<Button.Background>
 				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
 			</Button.Background>

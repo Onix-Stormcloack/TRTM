@@ -8,14 +8,20 @@
 
   <ItemGroup>
     <None Remove="src\images\background.jpg" />
+    <None Remove="src\images\button_bg\bgList.png" />
     <None Remove="src\images\button_bg\Wood.png" />
+    <None Remove="src\images\button_bg\Wood_Clicked.png" />
+    <None Remove="src\images\button_bg\Wood_Clicked2.png" />
     <None Remove="src\images\Icon.jpg" />
     <None Remove="src\images\wooden_signboard_adjusted.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="src\images\background.jpg" />
+    <Resource Include="src\images\button_bg\bgList.png" />
     <Resource Include="src\images\button_bg\Wood.png" />
+    <Resource Include="src\images\button_bg\Wood_Clicked.png" />
+    <Resource Include="src\images\button_bg\Wood_Clicked2.png" />
     <Resource Include="src\images\Icon.jpg" />
     <Resource Include="src\images\wooden_signboard_adjusted.png" />
   </ItemGroup>

@@ -24,16 +24,6 @@ namespace TRTM
         {
             InitializeComponent();
         }
-
-        private void Bt_OnClick(object sender, RoutedEventArgs e)
-        {
-            string NomBouton = (sender as System.Windows.Controls.Button).Content.ToString();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 
 }
