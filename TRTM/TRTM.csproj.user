@@ -10,5 +10,17 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\VSelectObject.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\VInventory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 </Project>
