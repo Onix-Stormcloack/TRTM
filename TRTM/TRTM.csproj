@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="src\images\background.jpg" />
+    <None Remove="src\images\button_bg\Wood.png" />
+    <None Remove="src\images\Icon.jpg" />
+    <None Remove="src\images\wooden_signboard_adjusted.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="src\images\background.jpg" />
+    <Resource Include="src\images\button_bg\Wood.png" />
+    <Resource Include="src\images\Icon.jpg" />
+    <Resource Include="src\images\wooden_signboard_adjusted.png" />
+  </ItemGroup>
+
+</Project>
