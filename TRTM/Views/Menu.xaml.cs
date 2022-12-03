@@ -22,6 +22,15 @@ namespace TRTM.Views
     public partial class Menu : Window
     {
         //public Menu() => InitializeComponent();
+
+        private ViewModelBase _SelectedViewModel = new VMMenu();
+
+        public ViewModelBase SelectedViewModel
+        {
+            get { return _SelectedViewModel; }
+            set { _SelectedViewModel = value; }
+        }
+
         public Menu(VMMenu vmMenu)
         {
             InitializeComponent();

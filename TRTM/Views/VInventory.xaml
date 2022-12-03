@@ -12,10 +12,19 @@
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="Bauhaus 93"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
+                </Setter.Value>
+            </Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="10">
                             <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                         </Border>
                         <ControlTemplate.Triggers>
@@ -23,6 +32,13 @@
                                 <Setter Property="Background" TargetName="Border" >
                                     <Setter.Value>
                                         <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked2.png"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Border" >
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked_Dark.png"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
@@ -38,27 +54,11 @@
         </Grid.Background>
         <Image Margin="218,0,218,306" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png"/>
         <Label Content="Inventaire pour l'Agriculture" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" FontFamily="Bauhaus 93" FontSize="24" Background="{x:Null}"/>
-        <Button Content=" Suppr " HorizontalAlignment="Left" Margin="657,246,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24" Width="74" 
-    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40">
-            <Button.Background>
-                <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content=" New " HorizontalAlignment="Left" Margin="657,142,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-            <Button.Background>
-                <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content=" Clear " HorizontalAlignment="Left" Margin="657,189,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24" Width="74">
-            <Button.Background>
-                <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-            </Button.Background>
-        </Button>
-        <Button Content=" Back " HorizontalAlignment="Left" Margin="657,367,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" Height="36" Width="74" FontSize="24">
-            <Button.Background>
-                <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-            </Button.Background>
-        </Button>
+        <Button Content=" Suppr " Margin="657,246,0,0" Width="74" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="40"/>
+        <Button Content=" New " Margin="657,142,0,0"/>
+        <Button Content=" Clear " Margin="657,189,0,0" Width="74"/>
+        <Button Content=" Back " Margin="657,367,0,0" Height="36" Width="74"/>
+            
         <ListBox Margin="49,142,148,18">
             <ListBox.Background>
                 <ImageBrush ImageSource="/src/images/button_bg/bgList.png" Stretch="UniformToFill"/>

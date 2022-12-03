@@ -16,19 +16,19 @@ namespace TRTM
     public partial class App : Application
     {
         //ViewModels
-        private readonly VMMenu _VmMenu;
-        private readonly VMInventory _VMInventory;
-        private readonly VMSearch _VMSearch;
-        private readonly VMSelectObject _VMSelectObject;
+        private VMMenu _VmMenu;
+        private VMInventory _VMInventory;
+        private VMSearch _VMSearch;
+        private VMSelectObject _VMSelectObject;
         
         //Views
-        private readonly Menu _MenuForm;
-        private readonly VInventory _VInventoryForm;
-        private readonly VSearch _VSearchForm;
-        private readonly VSelectObject _VSelectObjectForm;
+        private Menu _MenuForm;
+        private VInventory _VInventoryForm;
+        private VSearch _VSearchForm;
+        private VSelectObject _VSelectObjectForm;
 
 
-        public App()
+        protected override void OnStartup(StartupEventArgs e)
         {
             //Init ViewModels
             _VmMenu = new VMMenu();
@@ -44,6 +44,7 @@ namespace TRTM
             
             //init initial View
             _MenuForm.Show();
+            base.OnStartup(e);
         }
     }
 }

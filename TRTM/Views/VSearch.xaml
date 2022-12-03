@@ -11,54 +11,66 @@
 		Background="LightSteelBlue" Height="450" Width="800" 
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeMode="NoResize">
 
-	<Window.Resources>
-		<Style TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Border x:Name="Border" Background="{TemplateBinding Background}">
-							<ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-						</Border>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsMouseOver" Value="True">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="Bauhaus 93"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" TargetName="Border" >
                                     <Setter.Value>
                                         <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked2.png"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</Window.Resources>
-	<Grid>
-		<Grid.Background>
-			<ImageBrush ImageSource="/src/images/background.jpg"/>
-		</Grid.Background>
-		<Image x:Name="WoodenSign" Margin="120,0,120,233" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png"/>
-		<Label Content="Traveller's Rest Tavern Management" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0" FontFamily="Script MT Bold" FontSize="30"/>
-		<Button Content=" Agriculture " HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content=" Boissons " HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content=" Cuisine " HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content="  ?" HorizontalAlignment="Left" Margin="739,340,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" Height="36" Width="36" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-	</Grid>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Border" >
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked_Dark.png"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/src/images/background.jpg"/>
+        </Grid.Background>
+        <Image Margin="218,0,218,306" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png"/>
+        
+        <Label Content="Ajouter un élément" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" FontFamily="Bauhaus 93" FontSize="24" Background="{x:Null}"/>
+        
+        <Button Content=" Add " Margin="657,141,0,0"/>
+        <Button Content=" Back " Margin="716,380,0,0" Height="36" Width="74"/>
 
+        <ListBox Margin="49,182,89,18">
+            <ListBox.Background>
+                <ImageBrush ImageSource="/src/images/button_bg/bgList.png" Stretch="UniformToFill"/>
+            </ListBox.Background>
+        </ListBox>
+        
+        <TextBox Margin="200,141,200,255" TextWrapping="Wrap" Text="Rechercher" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="Arial" FontSize="22">
+            <TextBox.Background>
+                <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
+            </TextBox.Background>
+        </TextBox>
+
+    </Grid>
 </Window>

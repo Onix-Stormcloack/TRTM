@@ -4,61 +4,79 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TRTM.ViewModels"
+        xmlns:viewmodels="clr-namespace:TRTM.ViewModels"
+        xmlns:views="clr-namespace:TRTM.Views"
         mc:Ignorable="d"
-        d:DataContext= " {d:DesignInstance local:VMMenu}"
+        d:DataContext= "{d:DesignInstance Type=local:VMMenu}"
 		Title="TRTM"
 		Icon="/src/images/Icon.jpg"
 		Background="LightSteelBlue" Height="450" Width="800" 
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeMode="NoResize">
 
-	<Window.Resources>
-		<Style TargetType="{x:Type Button}">
-			<Setter Property="Template">
-				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Border x:Name="Border" Background="{TemplateBinding Background}">
-							<ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-						</Border>
-						<ControlTemplate.Triggers>
-							<Trigger Property="IsMouseOver" Value="True">
+    <Window.Resources>
+        <DataTemplate x:Name="InventoryTemplate" DataType="{x:Type viewmodels:VMInventory}">
+            <views:VInventory DataContext="{Binding}"/>
+        </DataTemplate>
+        
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="FontFamily" Value="Bauhaus 93"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Grid.Row" Value="1"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Command" Value="{Binding CommandSwitchingViews}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="Border" Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
                                 <Setter Property="Background" TargetName="Border" >
                                     <Setter.Value>
                                         <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked2.png"/>
                                     </Setter.Value>
                                 </Setter>
                             </Trigger>
-						</ControlTemplate.Triggers>
-					</ControlTemplate>
-				</Setter.Value>
-			</Setter>
-		</Style>
-	</Window.Resources>
-	<Grid>
-		<Grid.Background>
-			<ImageBrush ImageSource="/src/images/background.jpg"/>
-		</Grid.Background>
-		<Image x:Name="WoodenSign" Margin="120,0,120,233" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png"/>
-		<Label Content="Traveller's Rest Tavern Management" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,92,0,0" FontFamily="Script MT Bold" FontSize="30"/>
-		<Button Content=" Agriculture " HorizontalAlignment="Center" Margin="0,217,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content=" Boissons " HorizontalAlignment="Center" Margin="0,269,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content=" Cuisine " HorizontalAlignment="Center" Margin="0,322,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-		<Button Content="  ?" HorizontalAlignment="Left" Margin="739,340,0,0" VerticalAlignment="Top"  FontFamily="Bauhaus 93" Height="36" Width="36" FontSize="24">
-			<Button.Background>
-				<ImageBrush ImageSource="/src/images/button_bg/Wood.png"/>
-			</Button.Background>
-		</Button>
-	</Grid>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" TargetName="Border" >
+                                    <Setter.Value>
+                                        <ImageBrush ImageSource="/src/images/button_bg/Wood_Clicked_Dark.png"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid HorizontalAlignment="Center" Width="800" Height="450" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="206*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="17*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/src/images/background.jpg"/>
+        </Grid.Background>
+        <Image x:Name="WoodenSign" Margin="120,0,120,233" Stretch="Fill" Source="/src/images/wooden_signboard_adjusted.png" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label Content="Traveller's Rest Tavern Management" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,90,0,0" FontFamily="Script MT Bold" FontSize="30" Height="46" Grid.Row="1" Width="461" Grid.ColumnSpan="2"/>
+        
+        <Button Content=" Agriculture " Margin="335,206,0,0" Width="130" CommandParameter="A"/>
+        <Button Content=" Boissons " Margin="351,258,0,0" Width="99" CommandParameter="B"/>
+        <Button Content=" Cuisine " Margin="354,311,0,0" Width="92" CommandParameter="C"/>
+        <Button Content="  ?"  Margin="109,329,0,0" Width="36" Grid.Column="1" CommandParameter="H"/>
+    </Grid>
 
 </Window>
