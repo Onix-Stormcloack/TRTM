@@ -14,10 +14,6 @@
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ResizeMode="NoResize">
 
     <Window.Resources>
-        <DataTemplate x:Name="InventoryTemplate" DataType="{x:Type viewmodels:VMInventory}">
-            <views:VInventory DataContext="{Binding}"/>
-        </DataTemplate>
-        
         <Style TargetType="{x:Type Button}">
             <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
